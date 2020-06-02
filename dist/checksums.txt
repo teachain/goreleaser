@@ -1,0 +1,4 @@
+5c1ef106a76e2bc362f6a4760a03b7f5d9571bd789c107bff5d22e216bd9358a  goreleaser_1.0.3_Linux_x86_64.tar.gz
+5aae44bcdeaceab506898de97b19024fc9290ab44bbb7825324911012dca3909  goreleaser_1.0.3_Linux_i386.tar.gz
+4e69ecfbfd80082e078e556f4ed8b78892fe2b8a60e36f02c4ce993672fafe66  goreleaser_1.0.3_Darwin_x86_64.tar.gz
+ccd745ee6119813b1eb6380900f3f9e6814edb156476c660266faff58616d75f  goreleaser_1.0.3_Darwin_i386.tar.gz
