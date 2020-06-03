@@ -16,8 +16,11 @@ deploy:
   script: docker run -e GITHUB_TOKEN=$GITHUB_TOKEN --rm --privileged -v $TRAVIS_BUILD_DIR:/go/src/github.com/teachain/goreleaser -v /var/run/docker.sock:/var/run/docker.sock -w /go/src/github.com/teachain/goreleaser mailchain/goreleaser-xcgo --rm-dist
   skip_cleanup: true
   on:
+    #如果设置tags: true，那么你提交tag的时候会有这个提示
     # Skipping a deployment with the script provider because this is not a tagged commit
-    #tags: true
+    tags: true
+    #如果不设置tags: true，那么你提交tag的时候会有这个提示
+    #Skipping a deployment with the script provider because this branch is not permitted
     repo: teachain/goreleaser
     branch: master
     condition: $DEPLOY = true
