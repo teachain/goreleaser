@@ -16,7 +16,8 @@ deploy:
   script: docker run -e GITHUB_TOKEN=$GITHUB_TOKEN --rm --privileged -v $TRAVIS_BUILD_DIR:/go/src/github.com/teachain/goreleaser -v /var/run/docker.sock:/var/run/docker.sock -w /go/src/github.com/teachain/goreleaser mailchain/goreleaser-xcgo --rm-dist
   skip_cleanup: true
   on:
-    tags: true
+    # Skipping a deployment with the script provider because this is not a tagged commit
+    #tags: true
     repo: teachain/goreleaser
     branch: master
     condition: $DEPLOY = true
