@@ -13,7 +13,7 @@ jobs:
     - go test -v ./...
 deploy:
 - provider: script
-  script: docker run GITHUB_TOKEN=$GITHUB_TOKEN --rm --privileged -v $TRAVIS_BUILD_DIR:/go/src/github.com/teachain/goreleaser -v /var/run/docker.sock:/var/run/docker.sock -w /go/src/github.com/teachain/goreleaser mailchain/goreleaser-xcgo --rm-dist
+  script: docker run -e GITHUB_TOKEN=$GITHUB_TOKEN --rm --privileged -v $TRAVIS_BUILD_DIR:/go/src/github.com/teachain/goreleaser -v /var/run/docker.sock:/var/run/docker.sock -w /go/src/github.com/teachain/goreleaser mailchain/goreleaser-xcgo --rm-dist
   skip_cleanup: true
   on:
     tags: true
